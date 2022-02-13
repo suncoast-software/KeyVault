@@ -4,6 +4,7 @@
     {
         private readonly INavigator? _navigator;
         public ViewModelBase? CurrentViewModel => _navigator.CurrentViewModel;
+        public SystemMessage SystemMessage { get; set; }
 
         private bool _isLoggedIn;
         public bool IsLoggedIn

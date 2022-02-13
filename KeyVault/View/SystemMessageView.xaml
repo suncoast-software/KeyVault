@@ -1,55 +1,72 @@
-﻿<Window x:Class="KeyVault.View.SystemMessageView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:KeyVault.View"
-        mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
-        AllowsTransparency="True"
-        Background="{x:Null}"
-        Height="150" Width="400">
-    <Grid HorizontalAlignment="Left"
-          VerticalAlignment="Top">
-        <Border CornerRadius="12"
-                Background="#151515"
-                Height="140"
-                Width="390">
+﻿<Window
+    x:Class="KeyVault.View.SystemMessageView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:KeyVault.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="400"
+    Height="150"
+    AllowsTransparency="True"
+    Background="{x:Null}"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Border
+            Width="390"
+            Height="140"
+            Background="#151515"
+            CornerRadius="12">
             <Border.Effect>
-                <DropShadowEffect BlurRadius="8"
-                                  ShadowDepth="6"
-                                  Direction="270"
-                                  Color="#000"
-                                  Opacity=".4"/>
+                <DropShadowEffect
+                    BlurRadius="8"
+                    Direction="270"
+                    Opacity=".4"
+                    ShadowDepth="6"
+                    Color="#000" />
             </Border.Effect>
-            <StackPanel Orientation="Vertical"
+            <StackPanel
+                Width="370"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Orientation="Vertical">
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <Image
+                        Width="75"
+                        Height="75"
+                        Margin="20,0"
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
-                        Width="370">
-                <StackPanel Orientation="Horizontal"
-                            Margin="10">
-                    <Rectangle Fill="#fff"
-                           Height="75"
-                           Width="75"
-                           Margin="20 0"
-                           HorizontalAlignment="Left">
-
-                    </Rectangle>
-                    <TextBlock Text="Message"
-                           Foreground="White"
-                           FontSize="22"
-                           VerticalAlignment="Center"/>
+                        Source="/Assets/Images/error.png" />
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        FontSize="18"
+                        Foreground="White"
+                        Text="{Binding Message}" 
+                        TextWrapping="Wrap"/>
 
                 </StackPanel>
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Right">
-                    <Button Content="OK"
-                            Margin="10 0 10 0"/>
-                    <Button Content="CANCEL"/>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Button
+                        Width="70"
+                        Margin="10,0,50,0"
+                        Background="#2B2A2A"
+                        BorderBrush="#7F7F7F"
+                        BorderThickness=".5"
+                        Content="OK">
+                        <Button.Effect>
+                            <DropShadowEffect
+                                BlurRadius="2"
+                                Direction="270"
+                                Opacity=".4"
+                                ShadowDepth="2"
+                                Color="#000" />
+                        </Button.Effect>
+                    </Button>
+
                 </StackPanel>
             </StackPanel>
-           
+
         </Border>
     </Grid>
 </Window>

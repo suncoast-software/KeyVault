@@ -87,6 +87,14 @@
                     </Button>
                    
                 </StackPanel>
+                <TextBlock HorizontalAlignment="Center">
+                    <Hyperlink Command="{Binding CreateNewAccountCommand}"
+                               TextDecorations="None"
+                               Foreground="#595959">
+                        Create New Account
+                    </Hyperlink>
+                               
+                </TextBlock>
             </StackPanel>
         </Border>
     </Grid>

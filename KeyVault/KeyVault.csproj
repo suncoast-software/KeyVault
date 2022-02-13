@@ -8,8 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\" />
-    <Folder Include="Services\" />
+    <None Remove="Assets\Images\critical.png" />
+    <None Remove="Assets\Images\error.png" />
+    <None Remove="Assets\Images\info.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +29,13 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\critical.png" />
+    <Resource Include="Assets\Images\error.png" />
+    <Resource Include="Assets\Images\info.png" />
   </ItemGroup>
 
 </Project>

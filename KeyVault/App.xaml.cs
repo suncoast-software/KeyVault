@@ -11,6 +11,7 @@
                 services.AddSingleton<AppViewModel>();
                 services.AddTransient<AppDbContextFactory>();
                 services.AddSingleton<INavigator, Navigator>();
+                services.AddSingleton<IDataService, DataService>();
                 services.AddSingleton<MainWindow>(s => new MainWindow()
                 {
                     DataContext = s.GetRequiredService<AppViewModel>()

@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace KeyVault.View
 {
     /// <summary>
-    /// Interaction logic for SystemMessageView.xaml
+    /// Interaction logic for CreateNewAccountView.xaml
     /// </summary>
-    public partial class SystemMessageView : Window
+    public partial class CreateNewAccountView : Window
     {
-
-        public SystemMessageView()
+        public CreateNewAccountView()
         {
             InitializeComponent();
-            DataContext = new SystemMessageViewModel();
         }
     }
 }
