@@ -11,3 +11,8 @@ global using Microsoft.Extensions.Hosting;
 global using System.Windows;
 global using KeyVault.View;
 global using KeyVault.Utility;
+global using System.ComponentModel.DataAnnotations;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Design;
+global using KeyVault.Model;
+global using KeyVault.Data.Factories;
