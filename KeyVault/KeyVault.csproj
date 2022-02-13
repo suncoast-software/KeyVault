@@ -9,10 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Factories\" />
-    <Folder Include="Data\Configuration\" />
-    <Folder Include="Model\" />
     <Folder Include="Interface\" />
-    <Folder Include="Utility\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

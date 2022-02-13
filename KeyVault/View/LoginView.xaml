@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:KeyVault.View"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -10,13 +11,13 @@
         ResizeMode="NoResize"
         AllowsTransparency="True"
         Background="{x:Null}"
-        Height="350" Width="300">
+        Height="300" Width="250">
     <Grid HorizontalAlignment="Left"
           VerticalAlignment="Top">
         <Border CornerRadius="12"
                 Background="#151515"
-                Height="340"
-                Width="290">
+                Height="290"
+                Width="240">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="8"
                                   ShadowDepth="6"
@@ -24,6 +25,69 @@
                                   Color="#000"
                                   Opacity=".4"/>
             </Border.Effect>
+            <StackPanel Orientation="Vertical"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center">
+                <Button Width="120"
+                        Height="90"
+                        Background="{x:Null}"
+                        BorderBrush="Transparent"
+                        Foreground="#383838">
+                    <md:PackIcon Kind="Key"
+                                 Height="90"
+                                 Width="90"
+                                 HorizontalAlignment="Center"/>
+                </Button>
+                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         Height="50"
+                         Width="200"
+                         FontSize="18"
+                         Foreground="#555C02"
+                         VerticalContentAlignment="Bottom"
+                         md:HintAssist.Hint="Username"
+                         md:HintAssist.FloatingOffset="1, -10.0"
+                         Background="#1B1B1B"
+                         Margin="5"/>
+                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         Height="50"
+                         Width="200"
+                         FontSize="18"
+                         Foreground="#555C02"
+                         VerticalContentAlignment="Bottom"
+                         md:HintAssist.Hint="Password"
+                         md:HintAssist.FloatingOffset="1, -10.0"
+                         Background="#1B1B1B"
+                         Margin="5"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Button Height="50"
+                            Width="80"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="btnClose_Click">
+                        <md:PackIcon Kind="CloseBold"
+                                     Height="40"
+                                     Width="60"
+                                     HorizontalAlignment="Center"
+                                     Foreground="Red"/>
+
+                    </Button>
+                    <Button Height="50"
+                            Width="80"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Click="btnLogin_Click">
+                        <md:PackIcon Kind="LoginVariant"
+                                     Height="40"
+                                     Width="60"
+                                     HorizontalAlignment="Center"
+                                     Foreground="#383838"/>
+
+                    </Button>
+                   
+                </StackPanel>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>

@@ -10,6 +10,7 @@
         ResizeMode="NoResize"
         AllowsTransparency="True"
         Background="{x:Null}"
+        x:Name="AppWindow"
         Height="500" Width="700">
     <Grid Height="490" Width="690"
            VerticalAlignment="Top"
