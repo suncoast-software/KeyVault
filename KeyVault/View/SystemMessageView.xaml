@@ -42,8 +42,8 @@
                         VerticalAlignment="Center"
                         FontSize="18"
                         Foreground="White"
-                        Text="{Binding Message}" 
-                        TextWrapping="Wrap"/>
+                        Text="{Binding Message}"
+                        TextWrapping="Wrap" />
 
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">

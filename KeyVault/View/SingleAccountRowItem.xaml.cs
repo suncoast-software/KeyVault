@@ -10,21 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace KeyVault.View
 {
     /// <summary>
-    /// Interaction logic for SystemMessageView.xaml
+    /// Interaction logic for SingleAccountRowItem.xaml
     /// </summary>
-    public partial class SystemMessageView : Window
+    public partial class SingleAccountRowItem : UserControl
     {
-        private SystemMessage? _systemMessage = SystemMessageService._systemMessage;
-        public SystemMessageView()
+        public SingleAccountRowItem()
         {
             InitializeComponent();
-           
-            DataContext = new SystemMessageViewModel(_systemMessage);
         }
     }
 }

@@ -5,6 +5,7 @@
         private readonly INavigator? _navigator;
         public ViewModelBase? CurrentViewModel => _navigator.CurrentViewModel;
         public SystemMessage SystemMessage { get; set; }
+        public ICommand CloseCommand { get; set; }
 
         private bool _isLoggedIn;
         public bool IsLoggedIn
@@ -17,13 +18,18 @@
         {
             _navigator = navigator;
             _navigator.CurrentViewModelChanged += OnViewModelChanged;
+            CloseCommand = new RelayCommand(CloseApp);
+            //if(!IsLoggedIn)
+            //{
+            //    LoginView lv = new();
+            //    lv.ShowDialog();
+            //}
 
-            if(!IsLoggedIn)
-            {
-                LoginView lv = new();
-                lv.ShowDialog();
-            }
+        }
 
+        private void CloseApp()
+        {
+           Application.Current.Shutdown();
         }
 
         private void OnViewModelChanged()

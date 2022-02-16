@@ -16,9 +16,11 @@ namespace KeyVault.ViewModel
             get => _message;
             set => OnPropertyChanged(ref _message, value);
         }
-        public SystemMessageViewModel()
+
+        public SystemMessageViewModel(SystemMessage? systemMessage)
         {
-            Message = "this is a custom message";
+            _systemMessage = systemMessage;
+            Message = _systemMessage.Message;
         }
     }
 }

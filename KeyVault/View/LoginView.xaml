@@ -1,99 +1,113 @@
-﻿<Window x:Class="KeyVault.View.LoginView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:local="clr-namespace:KeyVault.View"
-        mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
-        WindowStyle="None"
-        ResizeMode="NoResize"
-        AllowsTransparency="True"
-        Background="{x:Null}"
-        Height="300" Width="250">
-    <Grid HorizontalAlignment="Left"
-          VerticalAlignment="Top">
-        <Border CornerRadius="12"
-                Background="#151515"
-                Height="290"
-                Width="240">
+﻿<Window
+    x:Class="KeyVault.View.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:KeyVault.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+    Width="250"
+    Height="300"
+    AllowsTransparency="True"
+    Background="{x:Null}"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Border
+            Width="240"
+            Height="290"
+            Background="#151515"
+            CornerRadius="12">
             <Border.Effect>
-                <DropShadowEffect BlurRadius="8"
-                                  ShadowDepth="6"
-                                  Direction="270"
-                                  Color="#000"
-                                  Opacity=".4"/>
+                <DropShadowEffect
+                    BlurRadius="8"
+                    Direction="270"
+                    Opacity=".4"
+                    ShadowDepth="6"
+                    Color="#000" />
             </Border.Effect>
-            <StackPanel Orientation="Vertical"
-                      HorizontalAlignment="Center"
-                      VerticalAlignment="Center">
-                <Button Width="120"
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical">
+                <Button
+                    Width="120"
+                    Height="90"
+                    Background="{x:Null}"
+                    BorderBrush="Transparent"
+                    Foreground="#383838">
+                    <md:PackIcon
+                        Width="90"
                         Height="90"
-                        Background="{x:Null}"
-                        BorderBrush="Transparent"
-                        Foreground="#383838">
-                    <md:PackIcon Kind="Key"
-                                 Height="90"
-                                 Width="90"
-                                 HorizontalAlignment="Center"/>
+                        HorizontalAlignment="Center"
+                        Kind="Key" />
                 </Button>
-                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                         Height="50"
-                         Width="200"
-                         FontSize="18"
-                         Foreground="#555C02"
-                         VerticalContentAlignment="Bottom"
-                         md:HintAssist.Hint="Username"
-                         md:HintAssist.FloatingOffset="1, -10.0"
-                         Background="#1B1B1B"
-                         Margin="5"/>
-                <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                         Height="50"
-                         Width="200"
-                         FontSize="18"
-                         Foreground="#555C02"
-                         VerticalContentAlignment="Bottom"
-                         md:HintAssist.Hint="Password"
-                         md:HintAssist.FloatingOffset="1, -10.0"
-                         Background="#1B1B1B"
-                         Margin="5"/>
-                <StackPanel Orientation="Horizontal"
+                <TextBox
+                    Width="200"
+                    Height="50"
+                    Margin="5"
+                    VerticalContentAlignment="Bottom"
+                    md:HintAssist.FloatingOffset="1, -10.0"
+                    md:HintAssist.Hint="Username"
+                    Background="#1B1B1B"
+                    FontSize="18"
+                    Foreground="#555C02"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <TextBox
+                    Width="200"
+                    Height="50"
+                    Margin="5"
+                    VerticalContentAlignment="Bottom"
+                    md:HintAssist.FloatingOffset="1, -10.0"
+                    md:HintAssist.Hint="Password"
+                    Background="#1B1B1B"
+                    FontSize="18"
+                    Foreground="#555C02"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <Button
+                        Width="80"
+                        Height="50"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Click="btnClose_Click">
+                        <md:PackIcon
+                            Width="60"
+                            Height="40"
                             HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
-                    <Button Height="50"
-                            Width="80"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
-                            Click="btnClose_Click">
-                        <md:PackIcon Kind="CloseBold"
-                                     Height="40"
-                                     Width="60"
-                                     HorizontalAlignment="Center"
-                                     Foreground="Red"/>
+                            Foreground="Red"
+                            Kind="CloseBold" />
 
                     </Button>
-                    <Button Height="50"
-                            Width="80"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
-                            Click="btnLogin_Click">
-                        <md:PackIcon Kind="LoginVariant"
-                                     Height="40"
-                                     Width="60"
-                                     HorizontalAlignment="Center"
-                                     Foreground="#383838"/>
+                    <Button
+                        Width="80"
+                        Height="50"
+                        Background="Transparent"
+                        BorderBrush="Transparent"
+                        Click="btnLogin_Click">
+                        <md:PackIcon
+                            Width="60"
+                            Height="40"
+                            HorizontalAlignment="Center"
+                            Foreground="#383838"
+                            Kind="LoginVariant" />
 
                     </Button>
-                   
+
                 </StackPanel>
                 <TextBlock HorizontalAlignment="Center">
-                    <Hyperlink Command="{Binding CreateNewAccountCommand}"
-                               TextDecorations="None"
-                               Foreground="#595959">
+                    <Hyperlink
+                        Command="{Binding CreateNewAccountCommand}"
+                        Foreground="#595959"
+                        TextDecorations="None">
                         Create New Account
                     </Hyperlink>
-                               
+
                 </TextBlock>
             </StackPanel>
         </Border>

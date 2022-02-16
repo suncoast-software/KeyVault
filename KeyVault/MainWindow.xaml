@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:KeyVault"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -35,6 +36,8 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="10"/>
                 </Grid.RowDefinitions>
+                
+                <!--#region  HEADER-->
                 <Border Grid.Column="0"
                         Grid.Row="0"
                         Grid.ColumnSpan="3"
@@ -54,9 +57,75 @@
                                    Grid.Column="1"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"/>
+                        <Button Grid.Column="2"
+                                Width="60"
+                                Height="30"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                HorizontalAlignment="Right"
+                                Command="{Binding CloseCommand}">
+                            <md:PackIcon Kind="Close"
+                                         Height="20"
+                                         Width="30"
+                                         Foreground="#8A8A8A"/>
+                        </Button>
                     </Grid>
                     
                 </Border>
+                <!--#endregion-->
+                
+                <!--#region  MAIN CONTENT-->
+                <Grid Grid.Column="1"
+                      Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--#region ACCOUNT BUTTONS-->
+                    <StackPanel Grid.Column="0"
+                                Grid.Row="0"
+                                Orientation="Horizontal"
+                                >
+                        <TextBlock Text="Accounts"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   FontSize="18"
+                                   Foreground="#BB9900"
+                                   Margin="20 0"/>
+
+
+                        <Button>
+                            
+                        </Button>
+                        <Button>
+                            
+                        </Button>
+                    </StackPanel>
+                    <!--#endregion-->
+                    
+                    <!--#region  ACCOUNT LIST-->
+                    <ListView Grid.Column="0"
+                              Grid.Row="1">
+                        
+                    </ListView>
+                    <!--#endregion-->
+                    
+                    <!--#region  ACCOUNT VIEW-->
+                    <StackPanel Grid.Column="1"
+                                Grid.Row="1"
+                                Orientation="Vertical">
+                        
+                    </StackPanel>
+                    <!--#endregion-->
+                </Grid>
+
+                <!--#endregion-->
             </Grid>
         </Border>
        

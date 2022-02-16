@@ -18,5 +18,6 @@ global using KeyVault.Model;
 global using KeyVault.Data.Factories;
 global using KeyVault.Interface;
 global using KeyVault.Services;
+global using KeyVault.Commands;
 global using Newtonsoft.Json;
 global using System.IO;
