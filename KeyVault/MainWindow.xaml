@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:uc="clr-namespace:KeyVault.View"
+        xmlns:vm="clr-namespace:KeyVault.ViewModel"
         xmlns:local="clr-namespace:KeyVault"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -78,7 +80,7 @@
                 <Grid Grid.Column="1"
                       Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="210"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
@@ -108,14 +110,11 @@
                         </Button>
                     </StackPanel>
                     <!--#endregion-->
-                    
-                    <!--#region  ACCOUNT LIST-->
-                    <ListView Grid.Column="0"
-                              Grid.Row="1">
-                        
-                    </ListView>
-                    <!--#endregion-->
-                    
+
+                    <uc:AccountView Grid.Column="0"
+                                    Grid.Row="1"/>
+
+
                     <!--#region  ACCOUNT VIEW-->
                     <StackPanel Grid.Column="1"
                                 Grid.Row="1"
