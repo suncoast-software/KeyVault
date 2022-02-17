@@ -4,7 +4,7 @@
     {
         public ConfigJson GetConnectionString()
         {
-            var configFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Configuration", "config.json");
+            var configFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "Configuration", "config.json");
             using var fs = File.OpenRead(configFile);
             using var sr = new StreamReader(fs, new UTF8Encoding(false));
             var json = sr.ReadToEnd();

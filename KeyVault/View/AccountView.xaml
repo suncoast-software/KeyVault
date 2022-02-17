@@ -7,7 +7,7 @@
              xmlns:vm="clr-namespace:KeyVault.ViewModel"
              xmlns:local="clr-namespace:KeyVault.View"
              mc:Ignorable="d" 
-             Height="400" Width="190">
+             Height="360" Width="190">
  
     <Grid>
         <!--#region  ACCOUNT LIST-->

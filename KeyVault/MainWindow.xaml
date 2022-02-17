@@ -92,8 +92,7 @@
                     <!--#region ACCOUNT BUTTONS-->
                     <StackPanel Grid.Column="0"
                                 Grid.Row="0"
-                                Orientation="Horizontal"
-                                >
+                                Orientation="Horizontal">
                         <TextBlock Text="Accounts"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center"
@@ -102,25 +101,53 @@
                                    Margin="20 0"/>
 
 
-                        <Button>
-                            
+                        <Button Width="50"
+                                Height="40"
+                                Background="Transparent"
+                                BorderBrush="Transparent">
+                            <md:PackIcon Kind="Minus"
+                                         Height="20"
+                                         Width="20"
+                                         Foreground="Red"/>
+
                         </Button>
-                        <Button>
-                            
+                        <Button Width="50"
+                                Height="40"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Command="{Binding AddAccountCommand}">
+                            <md:PackIcon Kind="Plus"
+                                         Height="20"
+                                         Width="20"
+                                         Foreground="Red"/>
                         </Button>
                     </StackPanel>
                     <!--#endregion-->
-
-                    <uc:AccountView Grid.Column="0"
-                                    Grid.Row="1"/>
-
-
-                    <!--#region  ACCOUNT VIEW-->
-                    <StackPanel Grid.Column="1"
-                                Grid.Row="1"
-                                Orientation="Vertical">
-                        
-                    </StackPanel>
+                    
+                    <!--#region  ACCOUNTS VIEW-->
+                    <ScrollViewer Grid.Column="0"
+                                  Grid.Row="1"
+                                  VerticalScrollBarVisibility="Hidden"
+                                  Margin="0 20 0 0"
+                                  Height="Auto">
+                        <uc:AccountView Grid.Column="0"
+                                        Grid.Row="1" />
+                    </ScrollViewer>
+                   
+                    <!--#endregion-->
+                    
+                    <!--#region  CONTENT CONTROL-->
+                    <ContentControl Grid.Column="1"
+                                    Grid.Row="1"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="{Binding Path=CurrentViewModel}">
+                        <ContentControl.Resources>
+                            <DataTemplate DataType="{x:Type vm:SingleAccountViewModel}">
+                                <uc:SingleAccountView/>
+                            </DataTemplate>
+                        </ContentControl.Resources>
+                    </ContentControl>
                     <!--#endregion-->
                 </Grid>
 

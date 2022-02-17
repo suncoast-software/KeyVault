@@ -9,14 +9,12 @@ namespace KeyVault.ViewModel
     internal class AccountViewModel: ViewModelBase
     {
 
-        private readonly AppDbContextFactory _dbFactory;
+        private AppDbContextFactory _dbFactory;
 
         public AccountViewModel()
         {
-           // _dbFactory = dbFactory;
-            Accounts = new List<Account>();
-            Accounts.Add(new Account { Name = "Google", Url = "www.google.com" });
-            Accounts.Add(new Account { Name = "Inked Apparel", Url = "www.inkedappareltees.com" });
+            _dbFactory = new AppDbContextFactory();
+            Accounts = LoadAccounts();
         }
 
 
@@ -26,6 +24,17 @@ namespace KeyVault.ViewModel
         {
             get => _accounts;
             set => OnPropertyChanged(ref _accounts, value);
+        }
+
+        private List<Account> LoadAccounts()
+        {
+            Accounts = new List<Account>();
+           // var db = _dbFactory.CreateDbContext();
+           // var accounts = db.Accounts.ToList();
+            Accounts.Add(new Account { Name = "Google", Url = "www.google.com" });
+            Accounts.Add(new Account { Name = "Inked Apparel", Url = "www.inkedappareltees.com" });
+
+            return Accounts;
         }
     }
 }

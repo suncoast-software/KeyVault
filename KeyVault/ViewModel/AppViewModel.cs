@@ -6,6 +6,7 @@
         public ViewModelBase? CurrentViewModel => _navigator.CurrentViewModel;
         public SystemMessage SystemMessage { get; set; }
         public ICommand CloseCommand { get; set; }
+        public ICommand AddAccountCommand { get; }
 
         private bool _isLoggedIn;
         public bool IsLoggedIn
@@ -18,12 +19,17 @@
         {
             _navigator = navigator;
             _navigator.CurrentViewModelChanged += OnViewModelChanged;
-            CloseCommand = new RelayCommand(CloseApp);
-            //if(!IsLoggedIn)
+            //if (!IsLoggedIn)
             //{
             //    LoginView lv = new();
             //    lv.ShowDialog();
+            //    IsLoggedIn = true;
             //}
+              AddAccountCommand = new NavigateCommand<SingleAccountViewModel>(_navigator, () => new SingleAccountViewModel());
+              CloseCommand = new RelayCommand(CloseApp);
+
+           
+           
 
         }
 

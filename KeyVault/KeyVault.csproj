@@ -38,4 +38,10 @@
     <Resource Include="Assets\Images\info.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Data\Configuration\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

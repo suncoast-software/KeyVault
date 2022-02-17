@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="KeyVault.View.SingleAccountView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:KeyVault.View"
+             mc:Ignorable="d" 
+             Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Vertical">
+            <TextBlock Text="Account Name"
+                       Background="#232323"
+                       Foreground="Orange"/>
+            <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     md:HintAssist.Hint="Account Name"
+                     md:HintAssist.Foreground="Orange"
+                     Foreground="Orange"
+                     Background="#434343"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -2,15 +2,10 @@
 {
     internal class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
     {
-        private readonly IDataService _dataService;
-
-        public AppDbContextFactory(IDataService dataService)
+        
+        public AppDbContext CreateDbContext(string[] args = null)
         {
-            _dataService = dataService;
-        }
-
-        public AppDbContext CreateDbContext(string[] args)
-        {
+            IDataService _dataService = new DataService();   
             var conString = _dataService.GetConnectionString();
             var connStr = conString.ConnectionString;
             var options = new DbContextOptionsBuilder<AppDbContext>();
